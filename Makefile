@@ -11,5 +11,13 @@ docker:
 
 # run sphinx documentation
 document:
-	-rm -rf docs/build
+	-pipenv shell
+	rm -rf docs/build
 	cd docs && make clean && make html
+	git checkout gh-pages 2>/dev/null || git checkout -b gh-pages
+	rm -rf !(.git|docs)
+	mv docs/build/html/* .
+	rm -rf docs
+	git add --all
+	git commit -m "Update Documentation"
+	git checkout master
