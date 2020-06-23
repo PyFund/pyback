@@ -41,5 +41,6 @@ test:
 
 # create coverage report
 coverage:
+	make activate
 	coverage run -m pytest tests/
 	coverage html
