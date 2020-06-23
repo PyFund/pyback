@@ -13,6 +13,7 @@ pydata-sphinx-theme = "*"
 twine = "*"
 pyback = {editable = true, path = "."}
 coverage = "*"
+pytest-cov = "*"
 
 [packages]
 
