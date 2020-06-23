@@ -16,9 +16,10 @@ document:
 	-pipenv shell
 	-rm -rf docs/build
 	cd docs && make clean && make html
-	git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
+	git checkout gh-pages  2>/dev/null || git checkout --orphan gh-pages
 	rm -rf !(.git|docs)
 	mv docs/build/html/* .
+	touch .nojekyll
 	rm -rf docs
 	git add --all
 	git commit -m "Update Documentation"
