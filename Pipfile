@@ -11,10 +11,10 @@ black = "==19.10b0"
 sphinx = "*"
 pydata-sphinx-theme = "*"
 twine = "*"
-shawnlinxl = {editable = true, path = "."}
+pyback = {editable = true, path = "."}
+coverage = "*"
 
 [packages]
-shawnlinxl = {path = "."}
 
 [requires]
 python_version = "3.8"

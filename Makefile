@@ -1,6 +1,6 @@
 SHELL=/bin/bash -O extglob -c
 
-.PHONY: activate_env clean_pyc docker lint
+.PHONY: activate_env clean_pyc docker lint test coverage
 
 # activate pipenv
 activate:
@@ -34,3 +34,12 @@ doc:
 lint:
 	make activate
 	black ./pyback
+
+# create test
+test:
+	pytest tests/
+
+# create coverage report
+coverage:
+	coverage run -m pytest tests/
+	coverage html
