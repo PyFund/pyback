@@ -5,8 +5,11 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
+versioneer = "*"
 flake8 = "*"
+black = "==19.10b0"
 sphinx = "*"
+pydata-sphinx-theme = "*"
 
 [packages]
 
