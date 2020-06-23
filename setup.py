@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="shawnlinxl",
+    name="pyback",
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     author="Shawn Lin",
