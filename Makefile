@@ -1,6 +1,10 @@
 SHELL=/bin/bash -O extglob -c
 
-.PHONY: docker, clean_pyc, lint
+.PHONY: activate_env clean_pyc docker lint
+
+# activate pipenv
+activate:
+	-pipenv shell
 
 # clean up pyc files
 clean_pyc:
@@ -14,7 +18,7 @@ docker:
 # run sphinx documentation
 doc:
 	echo "Please commit your changes or stash them before running documentation."
-	-pipenv shell
+	make activate
 	-rm -rf docs/build
 	cd docs && make clean && make html
 	git checkout gh-pages  2>/dev/null || git checkout --orphan gh-pages
@@ -28,4 +32,5 @@ doc:
 
 # lint code
 lint:
+	make activate
 	black ./pyback
