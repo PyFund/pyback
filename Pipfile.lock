@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "08f1a3491bf9d495c5e34dfb9c351b58f1e31928f2c0d60d79990b1a0bcfb2d9"
+            "sha256": "58f71210ee2e6d65acb3a473c61bae7d86df6133ad306b1d587d435e2c0cdd5f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,7 +15,12 @@
             }
         ]
     },
-    "default": {},
+    "default": {
+        "shawnlinxl": {
+            "path": ".",
+            "version": "==0+untagged.23.g8ff277e.dirty"
+        }
+    },
     "develop": {
         "alabaster": {
             "hashes": [
@@ -409,6 +414,10 @@
             ],
             "markers": "sys_platform == 'linux'",
             "version": "==3.1.2"
+        },
+        "shawnlinxl": {
+            "path": ".",
+            "version": "==0+untagged.23.g8ff277e.dirty"
         },
         "six": {
             "hashes": [
