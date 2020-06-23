@@ -1,6 +1,6 @@
 SHELL=/bin/bash -O extglob -c
 
-.PHONY: docker, clean_pyc
+.PHONY: docker, clean_pyc, lint
 
 # clean up pyc files
 clean_pyc:
@@ -25,3 +25,7 @@ doc:
 	git add --all
 	git commit -m "Update Documentation"
 	git checkout master
+
+# lint code
+lint:
+	black ./pyback
