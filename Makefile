@@ -1,5 +1,4 @@
-SHELL=/bin/bash
-.SHELLFLAGS="-O extglob -c"
+SHELL=/bin/bash -O extglob -c
 
 .PHONY: docker, clean_pyc
 
