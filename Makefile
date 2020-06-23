@@ -14,7 +14,7 @@ docker:
 # run sphinx documentation
 document:
 	-pipenv shell
-	rm -rf docs/build
+	-rm -rf docs/build
 	cd docs && make clean && make html
 	git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
 	rm -rf !(.git|docs)
