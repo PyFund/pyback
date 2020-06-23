@@ -1,8 +1,12 @@
-FROM python:3
-RUN pip install pipenv
+FROM python:3.8
 
-COPY Pipfile ./
-COPY Pipfile.lock ./
-RUN pipenv install
+LABEL maintainer="shawn.lin@gatech.edu"
+
+ADD Pipfile /pyback/
+ADD Pipfile.lock /pyback/
+WORKDIR /pyback
+RUN cat Pipfile
+RUN pip install pipenv \
+  && pipenv install --deploy --ignore-pipfile --dev
 
 CMD [ "/bin/bash" ]
