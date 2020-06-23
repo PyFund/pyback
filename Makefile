@@ -12,7 +12,7 @@ docker:
 	scripts/docker_run.sh
 
 # run sphinx documentation
-document:
+doc:
 	echo "Please commit your changes or stash them before running documentation."
 	-pipenv shell
 	-rm -rf docs/build
