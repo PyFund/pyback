@@ -13,6 +13,7 @@ docker:
 
 # run sphinx documentation
 document:
+	echo "Please commit your changes or stash them before running documentation."
 	-pipenv shell
 	-rm -rf docs/build
 	cd docs && make clean && make html
