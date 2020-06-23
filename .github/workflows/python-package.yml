@@ -32,6 +32,7 @@ jobs:
         flake8 pyback/
     - name: Test with pytest
       run: |
+        pip install .
         pytest tests/
     - name: Generate coverage report
       run: |
