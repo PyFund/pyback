@@ -10,6 +10,7 @@ flake8 = "*"
 black = "==19.10b0"
 sphinx = "*"
 pydata-sphinx-theme = "*"
+twine = "*"
 
 [packages]
 
