@@ -1,3 +1,6 @@
+SHELL=/bin/bash
+.SHELLFLAGS="-O extglob -c"
+
 .PHONY: docker, clean_pyc
 
 # clean up pyc files
@@ -14,7 +17,7 @@ document:
 	-pipenv shell
 	rm -rf docs/build
 	cd docs && make clean && make html
-	git checkout gh-pages 2>/dev/null || git checkout -b gh-pages
+	git checkout gh-pages 2>/dev/null || git checkout --orphan gh-pages
 	rm -rf !(.git|docs)
 	mv docs/build/html/* .
 	rm -rf docs
