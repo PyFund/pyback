@@ -37,10 +37,10 @@ lint:
 
 # create test
 test:
-	pytest tests/
+	pytest tests
 
 # create coverage report
 coverage:
 	make activate
-	coverage run -m pytest tests/
+	coverage run -m pytest tests
 	coverage html
