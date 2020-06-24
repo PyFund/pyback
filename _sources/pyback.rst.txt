@@ -4,6 +4,14 @@ pyback package
 Submodules
 ----------
 
+pyback.feed module
+------------------
+
+.. automodule:: pyback.feed
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 pyback.strategy module
 ----------------------
 
