@@ -1,9 +1,6 @@
 Welcome to pyback's documentation!
 ==================================
 
-.. automodule::pyback
-    :members:
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
