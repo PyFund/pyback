@@ -1,5 +1,5 @@
 import logging
-from typing import List
+from typing import Union, List
 
 log = logging.getLogger(__name__)
 
@@ -16,13 +16,18 @@ class Strategy:
 
         log.info(f"Initiating Strategy. name={name}")
         self.name = name
-        self.feed = []
+        self.feed = set()
 
-    def subscribe(self, feed_id: List[str]):
+    def subscribe(self, feed_id: Union[str, List[str]]):
         """Subscribe to data feed
 
         Args:
-            feed_id: A list of ``feed_id`` to subscribe to.
+            feed_id: A single, or a list of ``feed_id`` to subscribe to.
         """
 
-        self.feed += feed_id
+        if type(feed_id) == str:
+            log.debug(f"Converting feed_id to list. feed_id={feed_id}")
+            feed_id = [feed_id]
+
+        log.info(f"Adding feed. feed_id={feed_id}")
+        self.feed.update(feed_id)

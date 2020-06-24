@@ -35,6 +35,7 @@ doc:
 lint:
 	make activate
 	black ./pyback
+	black ./tests
 
 # create test
 test:
