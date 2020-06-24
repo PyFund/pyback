@@ -60,7 +60,7 @@ class Strategy:
 
         Args:
             security: unique identifier of the security to trade
-            weight: amount to order, as a percentage of the portfolio value; 
+            weight: amount to order, as a percentage of the portfolio value;
                 If ``weight`` is positive, this means the weight of the security
                 to buy. Otherwise it means the the weight of the security to sell.
             limit: The limit price of the order. Defaults to None.
