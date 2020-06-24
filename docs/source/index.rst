@@ -1,7 +1,7 @@
 Welcome to pyback's documentation!
 ==================================
 
-.. automodule:: pyback
+.. automodule::pyback
     :members:
 
 .. toctree::
