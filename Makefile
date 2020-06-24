@@ -35,10 +35,11 @@ doc:
 lint:
 	make activate
 	black ./pyback
+	black ./tests
 
 # create test
 test:
-	pytest tests
+	pytest tests --cov
 
 # create coverage report
 coverage:
