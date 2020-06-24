@@ -20,6 +20,7 @@ doc:
 	echo "Please commit your changes or stash them before running documentation."
 	make activate
 	-rm -rf docs/build
+	-cd docs && sphinx-apidoc -o source/ ../pyback
 	cd docs && make clean && make html
 	git checkout gh-pages  2>/dev/null || git checkout --orphan gh-pages
 	rm -rf !(.git|docs)
