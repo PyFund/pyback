@@ -1,0 +1,22 @@
+pyback package
+==============
+
+Submodules
+----------
+
+pyback.strategy module
+----------------------
+
+.. automodule:: pyback.strategy
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: pyback
+   :members:
+   :undoc-members:
+   :show-inheritance:
