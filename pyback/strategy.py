@@ -1,4 +1,5 @@
 import logging
+from typing import List
 
 log = logging.getLogger(__name__)
 
@@ -15,3 +16,13 @@ class Strategy:
 
         log.info(f"Initiating Strategy. name={name}")
         self.name = name
+        self.feed = []
+
+    def subscribe(self, feed_id: List[str]):
+        """Subscribe to data feed
+
+        Args:
+            feed_id: A list of ``feed_id`` to subscribe to.
+        """
+
+        self.feed += feed_id
